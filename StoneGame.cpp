@@ -39,6 +39,12 @@ int main() {
         cin >> n;
         input2Darray(a, n);
         getPosOfMinMax(a, n, minp, maxp);
+
+        /*
+            a -> What will be the ans when you concider removing both from the same side
+            b -> What will be the ans when you concider removing both from the opp side
+            min(a, b)
+        */
         cout << min(min(max(minp+1, maxp+1), max(n-minp, n-maxp)), min(minp+1, n-minp)+min(maxp+1, n-maxp)) << endl;
     }   
 }
